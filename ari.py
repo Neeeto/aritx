@@ -62,7 +62,7 @@ def auto_transfer(email, password, to_address, headers, proxy=None):
         response.raise_for_status()
         result = response.json()
         if result.get("status") == "success" and result.get("result") == "success":
-            log(f"Send berhasil 1 ke {to_address}.", Fore.GREEN, "TRANSFER SUCCESS")
+            log(f"Send berhasil 25 ARI ke {to_address}.", Fore.GREEN, "TRANSFER SUCCESS")
             return True
         else:
             log(f"Send gagal ke {to_address}.", Fore.RED, "TRANSFER FAILED")
