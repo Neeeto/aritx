@@ -148,13 +148,13 @@ def main():
 
             auto_checkin(address, headers, proxy=random.choice(proxies) if proxies else None)
 
-            for j, (_, _, to_address, _) in enumerate(formatted_accounts[i + 1:], start=1):
+            for j, (_, _, to_address, _) in enumerate(formatted_accounts[i + 1:], start=25):
                 auto_transfer(email, password, to_address, headers, proxy=random.choice(proxies) if proxies else None)
 
             time.sleep(50)
 
-        log("Menunggu 24 jam untuk siklus berikutnya...", Fore.MAGENTA, "WAIT")
-        time.sleep(86400)
+        log("Menunggu 2 menit untuk siklus berikutnya...", Fore.MAGENTA, "WAIT")
+        time.sleep(120)
 
 if __name__ == "__main__":
     main()
